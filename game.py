@@ -51,5 +51,6 @@ while game:
             racket_left.update_left()
             racket_right.reset()
             racket_left.reset()
+            ball.reset()
         display.update()
         clock.tick(FPS)
