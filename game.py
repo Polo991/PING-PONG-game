@@ -53,6 +53,13 @@ while game:
             ball.rect.y += speed_y
             if ball.rect.y > win_height-50 or ball.rect.y < 0:
                 speed_y *=-1
+            if sprite.collide_rect(racket_right, ball) or sprite.collide_rect(racket_left, ball):
+                speed_x *=-1
+                speed_y *=-1
+                
+            if ball.recr.x < 0:
+                finish = True
+                game_over = True
             racket_right.reset()
             racket_left.reset()
             ball.reset()
